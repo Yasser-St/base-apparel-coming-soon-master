@@ -1,0 +1,354 @@
+/*_____________________________________________________*\
+                    #CUSTOM PROPPERTYS
+\*_____________________________________________________*/
+:root{
+
+    /*====Color====*/
+
+    /* Primary */
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Desaturated-Red-input: hsla(0, 36%, 70%, 0.493);
+    --Soft-Red: #f96262;
+
+    /* Neutral */
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+    /* Gradients */
+
+    --Linear-1: 135deg,  hsl(0, 0%, 100%),  hsl(0, 100%, 98%);
+    --Linear-2: 135deg,  hsl(0, 80%, 86%),  hsl(0, 74%, 74%);
+
+    /*====Typography====*/
+
+    /* Font family */
+    --font-family: 'Josefin Sans', sans-serif;
+
+    /* Font size */
+    --Primary-size:   .9rem;
+    --heading-size:  2.2rem;
+    --error-size  :   .8rem;
+
+    /* Font weight */
+    --Primary-weight  : 300;
+    --Secondary-weight: 400;
+    --Accent-weight   : 600;
+}
+
+
+/*_____________________________________________________*\
+                          #RESET
+\*_____________________________________________________*/
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin:  0;
+    box-sizing: border-box;
+}
+input{
+    background: none;
+}
+
+/*_____________________________________________________*\
+                        #BASE STYLE
+\*_____________________________________________________*/
+
+body{
+    min-height: 90vh;
+    background: linear-gradient(135deg,  hsl(0, 0%, 100%),  hsl(0, 100%, 98%));
+    font-family: var(--font-family);
+}
+
+.main-heading{
+    color: var(--Dark-Grayish-Red);
+}
+
+.main-heading span,
+.leading{
+    color: var(--Desaturated-Red);
+}
+
+#email::placeholder{
+    color: var(--Desaturated-Red-input);
+}
+
+#email{
+    color: var(--Dark-Grayish-Red);
+}
+
+
+
+/*_____________________________________________________*\
+                        #TYPOGRAPHY
+\*_____________________________________________________*/
+.main-heading{
+    font-size: var(--heading-size);
+    text-transform: uppercase;
+    font-weight: var(--Accent-weight);
+    letter-spacing: .5rem;
+}
+
+.main-heading span{
+    font-weight: var(--Primary-weight);
+}
+
+.leading{
+    font-size: var(--Primary-size);
+    font-weight: var(--Secondary-weight);
+}
+
+input{
+    font-family: var(--font-family);
+    font-size: var(--Primary-size);
+    font-weight: var(--Secondary-weight);
+}
+
+
+/*_____________________________________________________*\
+                       #MOBILE STYLE
+\*_____________________________________________________*/
+
+/* /*====container style====* */
+
+/*--grid--*/
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: min(94px) 1fr 1fr;
+}
+
+/*=====header style====*/
+
+.header-logo{
+    grid-column: 1/13;
+    grid-row: 1/2;
+}
+.header-logo img{
+    width: 30%;
+    max-width: 160px;
+    margin: 2rem 2.4rem 1.8rem 2rem;
+}
+/*====hero style====*/
+
+    /*--img style--*/
+.hero{
+    grid-column: 1/13;
+    grid-row: 2/3;
+    margin-bottom: 3.4rem;
+}
+
+.hero img{
+    width: 100%;
+}
+
+/*====element style====*/
+.element{
+    grid-column: 1/13;
+    grid-row: 3/4;
+    text-align: center;
+    padding-inline: 2rem;
+    margin: auto;
+}
+
+    /*--element heading style--*/
+.element .main-heading{
+    margin-bottom: 1rem;
+}
+
+    /*--element leading style*/
+.element .leading{
+    line-height: 1.3rem;
+    margin-bottom: 1.8rem;
+    max-width: 620px;
+}
+
+/*====input field style====*/
+    /*--style the input container--*/
+#input-container{
+    position: relative;
+    width: 100%;
+    margin-bottom: .6rem;
+    max-width: 620px;
+}
+
+    /*--input email style--*/
+#email {
+    width: 100%;
+    padding: .8rem 1rem .8rem 1.2rem;
+    border: 1px solid var(--Desaturated-Red-input);
+    border-radius: 2rem;
+}
+
+#email:focus{
+    outline: none;
+}
+
+    /*--position the button within the input email and style them*/
+#submit-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient( 135deg,  hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+    border: none;
+    border-radius: 2rem;
+    padding: .6rem 1.4rem .6rem 1.4rem;
+    align-self: center;
+}
+
+#submit-btn:hover{
+    cursor: pointer;
+    background: linear-gradient( 135deg,  hsl(0, 73%, 96%),  #f2b0b0);
+    box-shadow: 0 4px 7px #f2b0b0;
+}
+    /*--alos position the error sign within the input email and style it them--*/
+#error-sign{
+    width: 1.48rem;
+    position: absolute;
+    top: 9px;
+    right: 74px;
+    display: none;/* intilize them invisible becuase we want to be display just when  ther is an error  */
+}
+
+/*====javascript style for the error message====*/
+#error-message{
+    text-align: start;
+    font-size: var(--error-size);
+    padding-inline: 1.4rem;
+    line-height: 1.2rem;
+    color: var(--Soft-Red);
+}
+
+
+/*_____________________________________________________*\
+                    #SAMLL TABLET STYLE
+\*_____________________________________________________*/
+@media screen and (min-width: 38.76rem){
+    :root{
+        --Primary-size:   .94rem;
+        --heading-size:  2.7rem;
+        --error-size  :   .82rem;
+    }
+    /* add a min height for the second row  */
+    .container{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: min(94px) 1fr max(500px);
+    }
+    
+    /* resize the button(give them more padding) */
+    #submit-btn{
+        padding: .7rem 2rem .7rem 2rem;
+    }
+
+    /* reposition the error sign */
+    
+    #error-sign{
+        top: 10px;
+        right: 90px;
+    }
+}
+
+
+
+/*_____________________________________________________*\
+           #LARGE TABLET STYLE && LAPTOP STYLE
+\*_____________________________________________________*/
+@media screen and (min-width: 57.5rem){
+    :root{
+        --Primary-size:   1rem;
+        --heading-size:  2.9rem;
+        --error-size  :   .88rem;
+    }
+
+    /* add img to the background of body */
+    body{
+        min-height: 80vh;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* reset the grid for adding the hero img on the left */
+    .container{
+        grid-template-columns: repeat(12 , 1fr);
+        grid-template-rows: max(156px) 1fr;
+        height: 100%;
+    }
+    /* header style after I reset the container */
+    .header-logo{
+        grid-column: 1/7;
+        grid-row: 1/2;
+        width: 500px;
+        margin-inline: auto;
+    }
+    
+    .header-logo img{
+        margin-top: 3rem;
+    } 
+
+    /* reposition the hero disktop version and style them */
+
+    .hero img{
+        display: none;/* indisplay the mobile version of the herp image for add the desktop version */
+    }
+
+    .hero{
+        grid-column: 7/13;
+        grid-row: 1/3;
+        background: url(./images/hero-desktop.jpg);/* I add it like background image fo fet to the container*/
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 6rem;
+        margin-bottom: 0;
+    }
+
+    /* also element style after I reset the grid container */
+    .element{
+        grid-column: 1/7;
+        grid-row: 2/3;
+        text-align: start;
+        margin-inline: auto;
+    }
+    
+    .element .main-heading{
+        margin-top: 4rem;
+
+    }
+
+    .element .leading{
+        line-height: 1.6rem;
+        max-width: 43ch;
+    }
+
+    /* give the error message margin on the bottom */
+    #error-message{
+        margin-bottom: 10rem;
+    }
+    
+    
+    
+}
+
+
+
+/*_____________________________________________________*\
+#DESKTOP STYLE && LARGE SCREEN STYLE
+\*_____________________________________________________*/
+@media screen and (min-width: 75rem){
+    :root{
+        --Primary-size:   1.3rem;
+        --heading-size:  4rem;
+        --error-size  :   1rem;
+    }
+    /* give the header section bit of width */
+    .header-logo{
+        width: 600px;
+    }
+
+    /* give the button bit of padding to fet the input filed */
+    #submit-btn{
+        padding: .8rem 2rem .8rem 2rem;
+    }
+}

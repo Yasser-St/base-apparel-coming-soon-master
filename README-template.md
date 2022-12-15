@@ -1,24 +1,20 @@
-# Frontend Mentor - Base Apparel coming soon page solution
+<!-- # Frontend Mentor - Base Apparel coming soon page solution -->
 
-This is a solution to the [Base Apparel coming soon page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
+This is a solution to the [Base Apparel coming soon page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0).
 ## Table of contents
 
-- [Overview](#overview)
+  - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
+  - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+In this layout we have a hero image paste trought tow element 'the header and main', and it haves also an email validator for  checking if the  email its real and if the input bar is empty, when the email subited .
 
 ### The challenge
 
@@ -27,20 +23,14 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Receive an error message when the `form` is submitted if:
-  - The `input` field is empty
-  - The email address is not formatted correctly
+  - The `input` field is empty: display this message *" Whoops! its look likes you forgot to add yout email"*.
+  - The email address is not formatted correctly *" Please provide a valid email"*.
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![The mobile version ](./design/screen%20shots%20images/mobile%20version.png).
+![The desktop version](./design/screen%20shots%20images/desktop%20version.png).
+![Display the error  ](./design/screen%20shots%20images/display%20an%20error.png).
 
 ### Links
 
@@ -49,6 +39,16 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
+
+- In HTML: I creat container for hold all the element on tis layout.
+*The header section and main that's contain a hero img , discription and  an input filed for adding the email address to folow*.
+
+- In CSS: I uesd the grid proprty to creat a container and divid it into difrent parts.
+*For position the elements iside the layout and make it responsive however the size of screen*.
+
+- In JavaScript : I cret function that's took input and pased it trought conditions.
+*If the email is reel it going to submit it, but if does not it display an error*.
+
 ### Built with
 
 - Semantic HTML5 markup
@@ -56,59 +56,19 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [Font from google fonts](https://fonts.google.com/specimen/Josefin+Sans) - For styles
+- Vanilla JavaScript
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I learend on this chanlage how to add linear color to the background, and how to I can add an image a spesfic place on the page. 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I have one thing I whant to focus on it, is how can declare a function thats toik a parrametr inside a JavaScript file not like I did in this chalange.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Positioning an image inside a text input box](https://stackoverflow.com/questions/35821279/positioning-an-image-inside-a-text-input-box). 
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
