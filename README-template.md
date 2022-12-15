@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [In githube] (https://cute-genie-664c23.netlify.app/)
-- Live Site URL: [Her is the live site] (https://github.com/Yasser-St/base-apparel-coming-soon-master)
+- Solution URL : [Github URL here   ](https://github.com/Yasser-St/base-apparel-coming-soon-master)
+- Live Site URL: [live site URL here](https://cute-genie-664c23.netlify.app/)
 
 ## My process
 
